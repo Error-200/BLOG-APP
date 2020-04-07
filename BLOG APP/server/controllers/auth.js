@@ -24,14 +24,14 @@ exports.signin = (req, res) => {
                 error: "User with that email does not exist. Please signup."
             });
         }
-        // email and password match
+        //  email and password matching
 
         if (!user.authenticate(password)) {
             return res.status(401).json({
                 error: "Email and password do not match"
             });
         }
-        // generate a token with user id and secret
+        // generating a token with user id and secret
         const token = jwt.sign({ _id: user._id }, process.env.JWT_SECRET);
         // persist the token as 't' in cookie with expiry date
         res.cookie("t", token, { expire: new Date() + 9999 });
