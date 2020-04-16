@@ -110,15 +110,22 @@ http://localhost:3000/
 **Google**
   
 Step 1: Go to the developer console: - [link](https://console.developers.google.com/)
+
 Step 2: Look up ‘oauth credentials’ in the search bar, and click the single option that pops up.
+
 Step 3: Try to find the ‘Create credentials’ button. If you find it, go ahead and click on it. Choose ‘Oauth Client Id’ 
 For application type, choose web application. 
+
 Step 4: Click save, and copy down the Client Id and Client Secret values that are hiding somewhere on the same page.
 
 **Facebook**
 
-Step 1: Go to https://developers.facebook.com/apps/ and select ‘Add a new app.’
+Step 1: Go to - [link](https://developers.facebook.com/apps/) and select ‘Add a new app.’
+
 Step 2: Give your app a name and complete the security question.
+
 Step 3: If you see an option to select products, choose ‘Facebook Login.’
+
 Step 3: Go to Settings and under App Domains type ‘localhost.’
+
 Step 4: Click Facebook Login under Products in the side bar, and add the following redirect url: http://localhost:3000/api/auth/facebook/callback
