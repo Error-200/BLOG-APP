@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FacebookLogin from 'react-facebook-login';
 import { Redirect } from "react-router-dom";
 import GoogleLogin from "react-google-login";
+import config from '../config.json';
 import { socialLogin, authenticate } from "../auth";
 
 class SocialLogin extends Component {
@@ -72,7 +73,7 @@ class SocialLogin extends Component {
             <div>
 
             <GoogleLogin
-                clientId="760336571918-p5grg31predg1gcqbnk29d74cihddrfm.apps.googleusercontent.com"
+                clientId={config.GOOGLE_CLIENT_ID}
                 buttonText="Login with Google"
                 onSuccess={this.responseGoogle}
                 onFailure={this.responseGoogle}
@@ -81,7 +82,7 @@ class SocialLogin extends Component {
 <p></p>
 
             <FacebookLogin
-                appId="3607081159338784"
+                appId={config.FACEBOOK_APP_ID}
                 autoLoad={false}
                 fields="name,email,picture, password"
                 buttonText="Facebook Login"
